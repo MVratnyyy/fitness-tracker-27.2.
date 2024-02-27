@@ -1,0 +1,50 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+
+#add-activity, #filter-controls {
+    margin-bottom: 20px;
+}
+
+#add-activity input[type="number"], #add-activity input[type="date"], #activity-type {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#add-activity button, #filter-controls button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#add-activity button:hover, #filter-controls button:hover {
+    background-color: #0056b3;
+}
+
+#activity-chart-container {
+    margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+    #add-activity input, #add-activity select, #add-activity button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #filter-controls select, #filter-controls button {
+        width: 100%;
+    }
+}

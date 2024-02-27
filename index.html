@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Fitness Tracker</h1>
+
+        <div id="goal-container">
+            <p>Celkem minut: <span id="total-minutes">0</span></p>
+        </div>
+
+        <div id="add-activity">
+            <input type="date" id="activity-date">
+            <select id="activity-type">
+                <option value="běh">Běh</option>
+                <option value="plavání">Plavání</option>
+                <option value="joga">Joga</option>
+                <option value="tenis">Tenis</option>
+            </select>
+            <input type="number" id="activity-duration" placeholder="Délka v minutách">
+            <button onclick="addActivity()">Přidat aktivitu</button>
+        </div>
+
+        <div id="activity-chart-container">
+            <canvas id="activity-chart"></canvas>
+        </div>
+
+        <div id="filter-controls">
+            <select id="filter-type">
+                <option value="all">Vše</option>
+                <option value="běh">Běh</option>
+                <option value="plavání">Plavání</option>
+                <option value="joga">Joga</option>
+                <option value="tenis">Tenis</option>
+            </select>
+            <button onclick="filterActivities()">Filtrovat</button>
+        </div>
+
+        <div id="activity-list"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
